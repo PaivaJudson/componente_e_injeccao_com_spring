@@ -2,6 +2,7 @@ package com.judsonpaiva.demo;
 
 import com.judsonpaiva.entities.Employee;
 import com.judsonpaiva.services.SalaryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,11 +12,9 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan({"com.judsonpaiva"})
 public class DemoApplication implements CommandLineRunner
 {
+    @Autowired
     private SalaryService salaryService;
 
-    public DemoApplication(SalaryService salaryService) {
-        this.salaryService = salaryService;
-    }
 
     public static void main(String[] args) {
 
